@@ -37,7 +37,7 @@ const patchFiles = fs.readdirSync("patches");
 for (const file of patchFiles) {
   if (!file.endsWith(".json")) continue;
 
-  if (patchName && file !== `${patchName}.json`) continue;
+  if (selectedPatch && file !== `${selectedPatch}.json`) continue;
 
   const patchPath = path.join("patches", file);
   const patch = JSON.parse(fs.readFileSync(patchPath, "utf-8"));
