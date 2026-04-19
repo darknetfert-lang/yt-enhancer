@@ -20,8 +20,21 @@ console.log("📦 Archivo recibido:", input);
 // Simulación más real
 const output = "patched_" + path.basename(input);
 
-// Copia el archivo (simula parche)
-fs.copyFileSync(input, output);
+// Solo parchear si es texto
+if (path.extname(input) !== ".txt") {
+  console.log("⚠️ Archivo no es texto, solo se copiará");
+  fs.copyFileSync(input, output);
+  process.exit(0);
+}
+
+// Leer contenido real (solo texto)
+let content = fs.readFileSync(input, "utf-8");
+
+// 🔥 Patch real
+content = content.replace(/YouTube/g, "YT-Enhanced");
+
+// Guardar archivo modificado
+fs.writeFileSync(output, content);
 
 console.log("🔧 Aplicando patch...");
 
