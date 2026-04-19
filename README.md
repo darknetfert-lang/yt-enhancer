@@ -1,8 +1,8 @@
-📦 yt-enhancer
+# 📦 yt-enhancer
 
 Simple CLI tool to apply text patches using JSON rules.
 
-🚀 Quick start
+## 🚀 Quick start
 
 Apply all patches:
 
@@ -12,13 +12,13 @@ Apply a specific patch:
 
 node cli/patcher.js test.txt remove-ads
 
-🚀 Features
+## 🚀 Features
 
 - Apply multiple patches automatically
 - Select a specific patch via CLI
 - JSON-based rules (find & replace)
 
-📦 Usage
+## 📦 Usage
 
 Apply all patches:
 
@@ -28,7 +28,7 @@ Apply a specific patch:
 
 node cli/patcher.js test.txt remove-ads
 
-🧩 Patch format
+## 🧩 Patch format
 
 Single rule:
 
@@ -44,12 +44,12 @@ Multiple rules:
   ]
 }
 
-📁 Structure
+## 📁 Structure
 
 cli/patcher.js
 patches/*.json
 
-💡 Example
+## 💡 Example
 
 Input:
 
@@ -59,6 +59,6 @@ Output:
 
 This clip has
 
-📜 License
+## 📜 License
 
 MIT
