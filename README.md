@@ -1,13 +1,16 @@
-# 📦 yt-enhancer
+📦 yt-enhancer
 
 Simple CLI tool to apply text patches using JSON rules.
 
-## 🚀 Quick start
+🚀 Quick start
 
-```bash
+Apply all patches:
+
 node cli/patcher.js test.txt
+
+Apply a specific patch:
+
 node cli/patcher.js test.txt remove-ads
-```
 
 🚀 Features
 
@@ -29,11 +32,7 @@ node cli/patcher.js test.txt remove-ads
 
 Single rule:
 
-{
-  "name": "Remove ads",
-  "find": "ads",
-  "replace": ""
-}
+{ "name": "Remove ads", "find": "ads", "replace": "" }
 
 Multiple rules:
 
