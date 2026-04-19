@@ -41,12 +41,20 @@ for (const file of patchFiles) {
 
   console.log("🧩 Aplicando patch:", patch.name);
 
+ if (patch.rules) {
+  for (const rule of patch.rules) {
+    content = content.replace(
+      new RegExp(rule.find, "g"),
+      rule.replace
+    );
+  }
+} else {
   content = content.replace(
     new RegExp(patch.find, "g"),
     patch.replace
   );
-}
-
+ }
+  
 // Guardar archivo modificado
 fs.writeFileSync(output, content);
 
