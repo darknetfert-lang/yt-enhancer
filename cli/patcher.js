@@ -43,6 +43,8 @@ for (const file of patchFiles) {
   const patch = JSON.parse(fs.readFileSync(patchPath, "utf-8"));
 
   console.log("🧩 Aplicando patch:", patch.name);
+  console.log("📂 Archivo:", file);
+console.log("🎯 selectedPatch:", selectedPatch);
 
  if (patch.rules) {
   for (const rule of patch.rules) {
