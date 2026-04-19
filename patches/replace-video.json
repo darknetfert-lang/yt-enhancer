@@ -1,0 +1,5 @@
+{
+  "name": "Replace video",
+  "find": "video",
+  "replace": "clip"
+}
