@@ -1,21 +1,31 @@
+import fs from "fs";
+import path from "path";
+
 console.log("yt-enhancer iniciado 🚀");
 
-const apk = process.argv[2];
+const input = process.argv[2];
 
-if (!apk) {
-  console.log("Uso: node cli/patcher.js <app.apk>");
+if (!input) {
+  console.log("Uso: node cli/patcher.js <archivo>");
   process.exit(1);
 }
 
-console.log("📦 APK recibido:", apk);
-
-// Simulación de proceso real
-function applyPatch() {
-  console.log("🔧 Aplicando patch...");
-  
-  setTimeout(() => {
-    console.log("✔ Patch aplicado correctamente (demo)");
-  }, 1500);
+if (!fs.existsSync(input)) {
+  console.log("❌ Archivo no existe");
+  process.exit(1);
 }
 
-applyPatch();
+console.log("📦 Archivo recibido:", input);
+
+// Simulación más real
+const output = "patched_" + path.basename(input);
+
+// Copia el archivo (simula parche)
+fs.copyFileSync(input, output);
+
+console.log("🔧 Aplicando patch...");
+
+// Simulación de modificación
+setTimeout(() => {
+  console.log("✔ Archivo generado:", output);
+}, 1000);
