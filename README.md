@@ -41,7 +41,7 @@ Multiple rules:
   "name": "Multi patch",
   "rules": [
     { "find": "ads", "replace": "" },
-    { "find": "video", "replace": "clip" }
+   { "find": "video", "replace": "clip" }
   ]
 }
 
