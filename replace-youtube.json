@@ -1,0 +1,5 @@
+{
+  "name": "Replace YouTube text",
+  "find": "YouTube",
+  "replace": "YT-Enhanced"
+}
