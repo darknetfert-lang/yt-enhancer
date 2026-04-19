@@ -4,13 +4,10 @@ Simple CLI tool to apply text patches using JSON rules.
 
 ## 🚀 Quick start
 
-Apply all patches:
-
+```bash
 node cli/patcher.js test.txt
-
-Apply a specific patch:
-
 node cli/patcher.js test.txt remove-ads
+```
 
 ## 🚀 Features
 
