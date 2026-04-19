@@ -1,0 +1,6 @@
+{
+  "name": "Remove ads text",
+  "find": "ads",
+  "replace": ""
+}
+
