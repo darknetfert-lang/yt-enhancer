@@ -4,6 +4,7 @@ import path from "path";
 console.log("yt-enhancer iniciado 🚀");
 
 const input = process.argv[2];
+const selectedPatch = process.argv[3];
 
 if (!input) {
   console.log("Uso: node cli/patcher.js <archivo>");
