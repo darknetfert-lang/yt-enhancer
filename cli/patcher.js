@@ -36,6 +36,8 @@ const patchFiles = fs.readdirSync("patches");
 for (const file of patchFiles) {
   if (!file.endsWith(".json")) continue;
 
+  if (patchName && file !== `${patchName}.json`) continue;
+
   const patchPath = path.join("patches", file);
   const patch = JSON.parse(fs.readFileSync(patchPath, "utf-8"));
 
@@ -49,11 +51,19 @@ for (const file of patchFiles) {
     );
   }
 } else {
+  if (patch.rules) {
+  for (const rule of patch.rules) {
+    content = content.replace(
+      new RegExp(rule.find, "g"),
+      rule.replace
+    );
+  }
+} else {
   content = content.replace(
     new RegExp(patch.find, "g"),
     patch.replace
   );
- }
+  }
   
 // Guardar archivo modificado
 fs.writeFileSync(output, content);
