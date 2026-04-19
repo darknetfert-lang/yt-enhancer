@@ -19,7 +19,9 @@ node cli/patcher.js test.txt remove-ads
 
 Apply all patches:
 
+```bash
 node cli/patcher.js test.txt
+```
 
 Apply a specific patch:
 
