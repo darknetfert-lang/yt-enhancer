@@ -2,6 +2,13 @@ yt-enhancer
 
 Simple CLI tool to apply text patches using JSON rules.
 
+## 🚀 Quick start
+
+```bash
+node cli/patcher.js test.txt
+node cli/patcher.js test.txt remove-ads
+```
+
 🚀 Features
 
 - Apply multiple patches automatically
