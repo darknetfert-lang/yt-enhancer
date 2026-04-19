@@ -53,11 +53,9 @@ patches/*.json
 ## 💡 Example
 
 Input:
-
 This video has ads
 
 Output:
-
 This clip has
 
 ## 📜 License
