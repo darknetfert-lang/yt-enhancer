@@ -30,8 +30,18 @@ if (path.extname(input) !== ".txt") {
 // Leer contenido real (solo texto)
 let content = fs.readFileSync(input, "utf-8");
 
-// 🔥 Patch real
-content = content.replace(/YouTube/g, "YT-Enhanced");
+// Cargar patch desde archivo
+const patch = JSON.parse(
+  fs.readFileSync("patches/replace-youtube.json", "utf-8")
+);
+
+console.log("🧩 Patch cargado:", patch.name);
+
+// Aplicar patch dinámico
+content = content.replace(
+  new RegExp(patch.find, "g"),
+  patch.replace
+);
 
 // Guardar archivo modificado
 fs.writeFileSync(output, content);
