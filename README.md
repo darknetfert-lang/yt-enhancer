@@ -1,4 +1,4 @@
-## 📦 yt-enhancer
+# 📦 yt-enhancer
 
 Simple CLI tool to apply text patches using JSON rules.
 
