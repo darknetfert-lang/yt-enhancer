@@ -37,11 +37,13 @@ Single rule:
 
 Multiple rules:
 
-{
-  "name": "Multi patch",
-  "rules": [
-    { "find": "ads", "replace": "" }
-    { "find": "video", "replace": "clip" }
+{ 
+    "name": "Multi patch",
+      "rules": [
+          { "find": "ads", "replace": "" },
+              { "find": "video", "replace": "clip" }
+                ]
+                }
 }
 
 ## 📁 Structure
