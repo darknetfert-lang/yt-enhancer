@@ -1,8 +1,8 @@
 yt-enhancer
 
-Simple CLI tool to apply text patches using JSON rules.
-
 ## 📦 yt-enhancer
+
+Simple CLI tool to apply text patches using JSON rules.
 
 ## 🚀 Quick start
 
