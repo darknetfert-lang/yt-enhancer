@@ -2,10 +2,6 @@ yt-enhancer
 
 Simple CLI tool to apply text patches using JSON rules.
 
-## 🎬 Demo
-
-![Demo](demo.gif)
-
 ## 🚀 Quick start
 
 ```bash
